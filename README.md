@@ -41,11 +41,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
         public async Task Invoke(HttpContext httpContext)
         {
-            var transaction = new TransactionScope(TransactionScopeOption.Required, 
-                                                  new TransactionOptions { 
-                                                   IsolationLevel = IsolationLevel.ReadCommitted,
-                                                          Timeout = TimeSpan.FromMinutes(2)
-                                                  });
+            var transaction = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { 
+                                                                                        IsolationLevel = IsolationLevel.ReadCommitted,
+                                                                                        Timeout = TimeSpan.FromMinutes(2)});
 
             try
             {
@@ -55,7 +53,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
             catch
             {
                 Transaction.Current.Rollback();
-            } finally
+            } 
+            finally
             {
                 transaction.Dispose();
             }
