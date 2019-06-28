@@ -1,5 +1,6 @@
-# ControleTransacaoCore
-Transações distribuída  .NET CORE com Middleware
+# Controle de transações com .NET CORE
+
+Esse middleware foi criado para não precisar fazer o controle de transação manualmente.
 
 
 
