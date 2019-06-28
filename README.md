@@ -3,8 +3,8 @@ Transações distribuída  .NET CORE com Middleware
 
 # Startup.cs
 
-# Markdown
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+## Usage
+```public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -18,12 +18,11 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
             app.UseHttpsRedirection();
             app.UseTransactionMiddleware();
             app.UseMvc();
-}
+}```
 
 
-# TransactionMiddleware.
+# TransactionMiddleware.cs
 
-# Markdown
  public class TransactionMiddleware
     {
         private readonly RequestDelegate _next;
