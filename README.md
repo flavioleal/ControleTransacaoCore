@@ -7,7 +7,8 @@ Transações distribuída  .NET CORE com Middleware
 
 # Startup.cs
 
-```public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+```
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -23,10 +24,11 @@ Transações distribuída  .NET CORE com Middleware
             app.UseMvc();
 }
 
-
+ ```
 
 # TransactionMiddleware.cs
 
+```
  public class TransactionMiddleware
     {
         private readonly RequestDelegate _next;
@@ -66,4 +68,4 @@ Transações distribuída  .NET CORE com Middleware
         }
     }
     
- ```
+```
