@@ -21,7 +21,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
             }
 
             app.UseHttpsRedirection();
-            app.UseTransactionMiddleware();
+           ** app.UseTransactionMiddleware(); **
             app.UseMvc();
 }
 
